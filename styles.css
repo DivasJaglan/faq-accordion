@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --light-pink: hsl(275, 100%, 97%);
+  --dark-purple: hsl(292, 42%, 14%);
+  --grayish-purple: hsl(292, 16%, 49%);
+}
+
+body {
+  display: flex;
+  padding: 8rem 1.5rem;
+  justify-content: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: var(--light-pink);
+  font-family: "Work Sans", sans-serif;
+  background-image: url(./assets/images/background-pattern-mobile.svg);
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+main {
+  display: flex;
+  max-width: 580px;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+.heading {
+  gap: 1rem;
+  display: flex;
+}
+
+.heading .star {
+  width: 1.6rem;
+  content: url("./assets/images/icon-star.svg");
+}
+
+.heading span {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--dark-purple);
+}
+
+button {
+  display: flex;
+  cursor: pointer;
+  font-weight: 700;
+  transition: 0.4s;
+  padding: 1.125rem;
+  align-items: center;
+  color: var(--dark-purple);
+  justify-content: space-between;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.active,
+.accordion:hover {
+  background-color: var(--light-pink);
+}
+
+.panel {
+  max-height: 0;
+  padding: 0 18px;
+  overflow: hidden;
+  color: var(--grayish-purple);
+  transition: max-height 0.2s ease-out;
+}
+
+.accordion:after {
+  content: url("./assets/images/icon-plus.svg");
+}
+
+.active:after {
+  content: url("./assets/images/icon-minus.svg");
+}
+
+hr {
+  border-bottom: 1px solid var(--light-pink);
+}
+
+@media (min-width: 658px) {
+  body {
+    background-image: url(./assets/images/background-pattern-desktop.svg);
+  }
+
+  main {
+    min-width: 580px;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  font-weight: 700;
+  color: hsl(228, 45%, 44%);
+}
