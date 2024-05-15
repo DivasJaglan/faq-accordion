@@ -53,6 +53,7 @@ function Accordion({ data }) {
             Challenge by{" "}
             <a
               href="https://www.frontendmentor.io?ref=challenge"
+              rel="noreferrer"
               target="_blank"
               className="text-blue-600 font-semibold"
             >
@@ -61,9 +62,7 @@ function Accordion({ data }) {
           </span>
           <span>
             Coded by{" "}
-            <a href="#" className="text-blue-600 font-semibold">
-              Divas Jaglan
-            </a>
+            <span className="text-blue-600 font-semibold">Divas Jaglan</span>
           </span>
         </div>
       </div>
